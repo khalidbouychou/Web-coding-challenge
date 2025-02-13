@@ -10,7 +10,7 @@ app.use(handelcors({
 
 
 app.get('/', function (req, res) {
-  res.send('---------------- Hello From Backend ------------- ')
+  res.send('- Hello From Backend -') 
 })
 
 app.get('/api/allTasks' , (req,res) => {
@@ -30,5 +30,5 @@ app.put('/api/allTasks/:id',(req,res)=>{
 })
 
 
-
-app.listen(3000,() => console.log("-------------- im listening on port 3000 just go work --------------"))
+const port_front = process.env.PORT || 8000
+app.listen(port_front,() => console.log(`- Im listening on port ${port_front} just go work -`))
